@@ -1,9 +1,9 @@
-def definition_long_string(len):
-    while  True:
-        s = input("Введите текс: ")
+def definition_long_string(len): # def - объявление функции
+    while True:
+        s = input("Введите текс: ")  # input - считывает строку (выводит ее в терминал где мы ее заполняем)
         if s == 'exit':
             break
-        if len(s)<3:
+        if len(s)<3: # len -  количество символов (длинна строки)
             print("Слишком мало")
             continue
         if len(s)>3:
@@ -13,4 +13,4 @@ def definition_long_string(len):
 
     print("Завершение")
 
-definition_long_string(len)
+definition_long_string(len) # вызов функции
