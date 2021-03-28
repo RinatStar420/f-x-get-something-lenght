@@ -1,6 +1,6 @@
 # создать файл с расширением txt
 # наполнить файл содержимым: Фамилия имя отчество 78912345
-def creat_contacts_file(arg1): # (def)объявление функции, но не вызов
+def create_contacts_file(arg1): # (def)объявление функции, но не вызов
 
     contacts = open('контакты.txt', 'a') # (a - append добавление текста без перезаписи) это страка открытый файл
     for item in range(0,3): #item - абстрактная строка
@@ -11,6 +11,13 @@ def creat_contacts_file(arg1): # (def)объявление функции, но 
         contacts.write(arg1[item]) # запуск записи файла
 
 
+def read_file(path_to_file):
+    file = open(path_to_file, 'r')
+    content = file.read()
+    return content
+
 
 arr_contact = ['Иванов И.И. 1234', 'Петров П.П. 2345', 'Семенов С.С. 45678'] # массиы с текстом
-creat_contacts_file(arr_contact) # вызов функции
+#create_contacts_file(arr_contact) # вызов функции
+
+print(read_file('cortege.py'))
