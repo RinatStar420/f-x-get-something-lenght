@@ -1,2 +1,2 @@
-# f-x-get-something-lenght
+# code basics and hexlet lss
 метод (функция)
