@@ -14,9 +14,9 @@ from math import sqrt
 
 def get_square_roots(num):
     if num < 0:
-        return None
+        return []
     if num == 0:
-        return 0
+        return [0]
     return [-sqrt(num), sqrt(num)]
 
 
