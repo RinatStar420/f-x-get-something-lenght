@@ -33,4 +33,4 @@ def is_continuous_sequence(arg):
         return False
 
 
-print(is_continuous_sequence([7]))
+print(is_continuous_sequence([[10, 11, 12, 14, 15]]))
