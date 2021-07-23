@@ -6,11 +6,11 @@
 'kept' — множество ключей, которые присутствовали в старом словаре и остались в новом;
 'added' — множество ключей, которые отсутствовали в старом словаре, но появились в новом;
 'removed' — множество ключей, которые присутствовали в старом словаре, но в новый не вошли.
-    diff_keys({'name': 'Bob', 'age': 42}, {})
+diff_keys({'name': 'Bob', 'age': 42}, {})
 {'kept': set(), 'added': set(), 'removed': {'name', 'age'}}
-   diff_keys({}, {'name': 'Bob', 'age': 42})
+diff_keys({}, {'name': 'Bob', 'age': 42})
 {'kept': set(), 'added': {'name', 'age'}, 'removed': set()}
-   diff_keys({'a': 2}, {'a': 1})
+diff_keys({'a': 2}, {'a': 1})
 {'kept': {'a'}, 'added': set(), 'removed': set()}
 Заметьте, значения не сравниваются — только ключи!
 """
@@ -29,7 +29,11 @@ def test_diff_keys():
 
 
 def diff_keys(old, new):
-    return {'kept': set(old) & set(new), 'added': set(new) - set(old), 'removed': set(old) - set(new)}
+    return {
+        'kept': set(old) & set(new),
+        'added': set(new) - set(old),
+        'removed': set(old) - set(new)
+    }
 
 
 print(diff_keys({'x': 100, 'y': 200, 'z': 105}, {'x': 100, 'y': 200, 'velocity': 2.5}))
