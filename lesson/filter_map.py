@@ -23,6 +23,7 @@
 """
 from math import sqrt
 
+
 def safe_sqrt(x):
     if x < 0:
         return False, x

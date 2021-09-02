@@ -5,14 +5,17 @@
 предыдущее значение ряда, а так же то, которое было еще раньше и запишет в переменную cur их сумму.
 
 """
+from memoizing import memoizing
 
+
+@memoizing(3)
 def fib(numb):
     cur = 1
     if numb == 0:
         return 0
     if numb > 2:
-        cur = fib(numb-1) + fib(numb-2)
+        cur = fib(numb - 1) + fib(numb - 2)
     return cur
 
 
-print(fib(5))
+print(fib(12))

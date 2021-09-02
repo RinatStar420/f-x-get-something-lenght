@@ -1,4 +1,4 @@
-from guess_num import find_number, send_number
+from call_twice import find_number, send_number
 
 
 num = input("Введите число: ")                            # вызов функции через import

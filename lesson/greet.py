@@ -19,7 +19,7 @@ def greet(name, *args):
         return 'Hello, {}!'.format(name)
 
 
-print(greet('Mike'))
+print(greet('Mike', 'Jenny', 'Carl', 'Marianna', 'Rinat'))
 
 
 # b = ' and '.join(list(n))

@@ -54,7 +54,7 @@ def abs_sum(numbers):
 print(abs_sum([-3, 7]))
 
 
-def walk(dictionary, path):
+def walk(dictionary, arg):
     """walk() должна для некоего словаря с глубокой вложенностью уметь доставать значение по указанному в виде iterable
 строк пути. В решении можете использовать функцию operator.getitem.
 
@@ -66,7 +66,7 @@ def walk(dictionary, path):
  walk({'a': {7: {'b': 42}}}, ["a", 7])
 {'b': 42}"""
 
-    return reduce(getitem, path, dictionary)
+    return reduce(getitem, arg, dictionary)
 
 
-print(walk({'Pine': {5: 'School #42'}, 'Elm': {13: {1: 'Appartments #2, Elm st.13'}}}, ['Pine', 5]))
+print(walk({'a': {7: {'b': 42}}}, ["a", 7, "b"]))

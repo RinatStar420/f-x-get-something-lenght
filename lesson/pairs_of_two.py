@@ -12,14 +12,11 @@ def pairs_of_two(s):
      в случае, если количесво символов нечетное, то для последней создания последней пары добаляется
      символ '_'."""
     j = ''.join(s)
-    c = len(j)
-    n = 2
-    if c % 2 == 0:
-        return [j[i:i + n] for i in range(0, c, n)]
+    if len(j) % 2 == 0:
+        return [j[i:i + 2] for i in range(0, len(j), 2)]
     else:
         a = j + '_'
-        return [a[i:i + n] for i in range(0, c, n)]
+        return [a[i:i + 2] for i in range(0, len(j), 2)]
 
 
-
-print(pairs_of_two(''))
+print(pairs_of_two('sdfadsfa'))
